@@ -89,12 +89,16 @@ body{
         }
         .dropdown-content{
             display: none;
+            background-color: grey;
             a{
                 display: block;
                 padding: 10px;
                 color: white;
                 text-decoration: none;
                 border-top: 2px solid white;
+                &:hover{
+                    background-color: #2a5bc4;
+                }
             }
         }
     }

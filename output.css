@@ -65,13 +65,16 @@ body {
     .header-nav .nav-item:hover .dropdown-content {
       display: block; }
   .header-nav .dropdown-content {
-    display: none; }
+    display: none;
+    background-color: grey; }
     .header-nav .dropdown-content a {
       display: block;
       padding: 10px;
       color: white;
       text-decoration: none;
       border-top: 2px solid white; }
+      .header-nav .dropdown-content a:hover {
+        background-color: #2a5bc4; }
 
 main .content {
   padding: 2em;
