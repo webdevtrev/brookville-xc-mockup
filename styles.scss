@@ -1,10 +1,38 @@
+*{
+    box-sizing: border-box;
+}
 .content-wrapper{
     max-width: 1000px;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     margin: 0;
     padding: 0;
+}
+.social{
+    width: 100%;
+    text-align: right;
+
+    &-icon{
+        text-align: center;
+        display: inline-block;
+        margin-left: 20px;
+        font-size: 25px;
+        color: black;
+        box-sizing: initial;
+        border: 2px solid black;
+        padding: 10px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        transition: .25s;
+        
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
 }
 
 .header{
@@ -30,29 +58,7 @@ body{
                 font-size: 60px;
             }
         }
-        .social{
-            width: 100%;
-            text-align: right;
-
-            &-icon{
-                text-align: center;
-                display: inline-block;
-                margin-left: 20px;
-                font-size: 25px;
-                color: black;
-                border: 2px solid black;
-                padding: 10px;
-                height: 25px;
-                width: 25px;
-                border-radius: 50%;
-                transition: .25s;
-                
-                &:hover{
-                    background-color: black;
-                    color: white;
-                }
-            }
-        }
+        
         
     }
     
@@ -60,47 +66,50 @@ body{
         font-family: 'Roboto', sans-serif;
         width: 100%;
         background-color: #2a5bc4;
-
-        .navbar{
-            display: flex;
-            flex: 1;
-            justify-content: center;
+        &-list{
+            text-align: center;
         }
-        .nav-link, .nav-button{
-            background-color: #2a5bc4;
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            padding: 5px;
-            border: none;
+        ul{
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            background-color: white;
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            width: 100%;
+            flex: 1;
+            a{
+                font-size: 16px;
+            }
         }
         .nav-item{
+            display: inline-block;
+            background-color:  #2a5bc4;
+            border: none;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
             width: 100%;
-            text-align: center;
-            border: 2px solid white;
-            border-top: none;
-            border-bottom: none;
+            padding: 5px;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            flex: 1;
+
             &:hover{
-                .dropdown-content{
-                    display: block;
-                }
+                background-color: grey;
             }
         }
-        .dropdown-content{
-            display: none;
-            background-color: grey;
-            a{
+        .nav-group{
+            width: 20%;
+            position: relative;
+
+            &:hover .dropdown{
                 display: block;
-                padding: 10px;
-                color: white;
-                text-decoration: none;
-                border-top: 2px solid white;
-                &:hover{
-                    background-color: #2a5bc4;
-                }
             }
         }
+        
     }
 
 
@@ -112,4 +121,23 @@ main{
         text-align: center;
         font-size: 40px;
     }
+}
+
+.footer{
+    width: 100%;
+    background-color: #2a5bc4;
+    .footer-container{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    .philosophy{
+        color: white;
+        p{
+            font-weight: 300;
+            line-height: 1.2;
+        }
+    }
+    
 }
