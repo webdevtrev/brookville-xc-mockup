@@ -4,15 +4,22 @@
 .content-wrapper{
     max-width: 1000px;
     margin: auto;
+    padding: 0 15px;
     font-family: 'Roboto', sans-serif;
+}
+.header-menu-mobile, .menu-hamburger{
+    display: none;
 }
 body{
     margin: 0;
     padding: 0;
 }
 .social{
-    width: 100%;
-    text-align: right;
+    &-desktop{
+        width: 100%;
+        text-align: right;
+    }
+    
 
     &-icon{
         text-align: center;
@@ -36,11 +43,11 @@ body{
 }
 
 .header{
+    margin: 30px 0;
 
     &-banner{
 
         display: flex;
-        flex: 1;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -56,18 +63,21 @@ body{
             .title{
                 display: inline-block;
                 font-size: 60px;
+                margin: 0;
             }
         }
         
         
     }
     
-    &-nav{
+    &-nav-desktop{
+        margin-top: 30px;
         font-family: 'Roboto', sans-serif;
         width: 100%;
         background-color: #2a5bc4;
-        &-list{
+        .header-nav-list{
             text-align: center;
+            padding: 0;
         }
         ul{
             list-style: none;
@@ -92,6 +102,7 @@ body{
             text-decoration: none;
             font-size: 20px;
             width: 100%;
+            height: 100%;
             padding: 5px;
             border-left: 2px solid white;
             border-right: 2px solid white;
@@ -112,6 +123,67 @@ body{
         
     }
 
+    &-menu-mobile{
+
+        width: 100%;
+        height: 100vw;
+        background-color: white;
+        position: absolute;
+
+        .header-nav-mobile{
+            text-align: center;
+            ul{
+                list-style: none;
+                padding: 0;
+            }
+            .dropdown{
+                .nav-item{
+                    background-color: white;
+                    color: black;
+                    text-align: center;
+                    border-top: 2px solid black;
+                }
+                display: none;
+            }
+            .nav-item{
+                display: inline-block;
+                background-color:  #2a5bc4;
+                border: none;
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                width: 100%;
+                padding: 5px;
+                border-left: 2px solid white;
+                border-right: 2px solid white;
+                flex: 1;
+    
+                &:hover{
+                    background-color: grey;
+                }
+            }
+        }
+
+        
+    }
+
+    .menu-hamburger{
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border-radius: 5px;
+        box-sizing: initial;
+        border: 2px solid black;
+        transition: .25s;
+        font-size: 30px;
+        cursor: pointer;
+        &:hover{
+            color: white;
+            background-color: black;
+        }
+    }
+    
+
 
 }
 
@@ -126,13 +198,15 @@ main{
 .footer{
     width: 100%;
     background-color: #2a5bc4;
+    padding: 20px;
+    
     .footer-container{
         display: flex;
-        flex: 1;
         justify-content: center;
         align-items: center;
     }
     .philosophy{
+        flex: 1;
         color: white;
         p{
             font-weight: 300;
@@ -140,4 +214,26 @@ main{
         }
     }
     
+}
+@media (max-width:700px){
+    .header-nav-desktop, .social-desktop{
+        display: none;
+    }
+    .menu-hamburger{
+        display: inline-block;
+    }
+    header{
+        border-bottom: 3px solid black;
+    }
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+
+        ol{
+            display: inline-block;
+            text-align: left;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
 }

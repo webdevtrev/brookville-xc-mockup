@@ -4,85 +4,138 @@
 .content-wrapper {
   max-width: 1000px;
   margin: auto;
+  padding: 0 15px;
   font-family: 'Roboto', sans-serif; }
+
+.header-menu-mobile, .menu-hamburger {
+  display: none; }
 
 body {
   margin: 0;
   padding: 0; }
 
-.social {
+.social-desktop {
   width: 100%;
   text-align: right; }
-  .social-icon {
-    text-align: center;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 25px;
-    color: black;
+.social-icon {
+  text-align: center;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 25px;
+  color: black;
+  box-sizing: initial;
+  border: 2px solid black;
+  padding: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  transition: .25s; }
+  .social-icon:hover {
+    background-color: black;
+    color: white; }
+
+.header {
+  margin: 30px 0; }
+  .header-banner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive; }
+    .header-banner .branding {
+      width: 100%;
+      display: flex;
+      align-items: center; }
+      .header-banner .branding .logo {
+        height: 6rem; }
+      .header-banner .branding .title {
+        display: inline-block;
+        font-size: 60px;
+        margin: 0; }
+  .header-nav-desktop {
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: #2a5bc4; }
+    .header-nav-desktop .header-nav-list {
+      text-align: center;
+      padding: 0; }
+    .header-nav-desktop ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      background-color: white; }
+    .header-nav-desktop .dropdown {
+      display: none;
+      position: absolute;
+      width: 100%;
+      flex: 1; }
+      .header-nav-desktop .dropdown a {
+        font-size: 16px; }
+    .header-nav-desktop .nav-item {
+      display: inline-block;
+      background-color: #2a5bc4;
+      border: none;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+      flex: 1; }
+      .header-nav-desktop .nav-item:hover {
+        background-color: grey; }
+    .header-nav-desktop .nav-group {
+      width: 20%;
+      position: relative; }
+      .header-nav-desktop .nav-group:hover .dropdown {
+        display: block; }
+  .header-menu-mobile {
+    width: 100%;
+    height: 100vw;
+    background-color: white;
+    position: absolute; }
+    .header-menu-mobile .header-nav-mobile {
+      text-align: center; }
+      .header-menu-mobile .header-nav-mobile ul {
+        list-style: none;
+        padding: 0; }
+      .header-menu-mobile .header-nav-mobile .dropdown {
+        display: none; }
+        .header-menu-mobile .header-nav-mobile .dropdown .nav-item {
+          background-color: white;
+          color: black;
+          text-align: center;
+          border-top: 2px solid black; }
+      .header-menu-mobile .header-nav-mobile .nav-item {
+        display: inline-block;
+        background-color: #2a5bc4;
+        border: none;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        width: 100%;
+        padding: 5px;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        flex: 1; }
+        .header-menu-mobile .header-nav-mobile .nav-item:hover {
+          background-color: grey; }
+  .header .menu-hamburger {
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border-radius: 5px;
     box-sizing: initial;
     border: 2px solid black;
-    padding: 10px;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    transition: .25s; }
-    .social-icon:hover {
-      background-color: black;
-      color: white; }
-
-.header-banner {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Bebas Neue', cursive; }
-  .header-banner .branding {
-    width: 100%;
-    display: flex;
-    align-items: center; }
-    .header-banner .branding .logo {
-      height: 6rem; }
-    .header-banner .branding .title {
-      display: inline-block;
-      font-size: 60px; }
-.header-nav {
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-  background-color: #2a5bc4; }
-  .header-nav-list {
-    text-align: center; }
-  .header-nav ul {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    background-color: white; }
-  .header-nav .dropdown {
-    display: none;
-    position: absolute;
-    width: 100%;
-    flex: 1; }
-    .header-nav .dropdown a {
-      font-size: 16px; }
-  .header-nav .nav-item {
-    display: inline-block;
-    background-color: #2a5bc4;
-    border: none;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    width: 100%;
-    padding: 5px;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    flex: 1; }
-    .header-nav .nav-item:hover {
-      background-color: grey; }
-  .header-nav .nav-group {
-    width: 20%;
-    position: relative; }
-    .header-nav .nav-group:hover .dropdown {
-      display: block; }
+    transition: .25s;
+    font-size: 30px;
+    cursor: pointer; }
+    .header .menu-hamburger:hover {
+      color: white;
+      background-color: black; }
 
 main .content {
   padding: 2em;
@@ -91,16 +144,36 @@ main .content {
 
 .footer {
   width: 100%;
-  background-color: #2a5bc4; }
+  background-color: #2a5bc4;
+  padding: 20px; }
   .footer .footer-container {
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center; }
   .footer .philosophy {
+    flex: 1;
     color: white; }
     .footer .philosophy p {
       font-weight: 300;
       line-height: 1.2; }
+
+@media (max-width: 700px) {
+  .header-nav-desktop, .social-desktop {
+    display: none; }
+
+  .menu-hamburger {
+    display: inline-block; }
+
+  header {
+    border-bottom: 3px solid black; }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center; }
+    .footer-container ol {
+      display: inline-block;
+      text-align: left;
+      margin: auto;
+      margin-bottom: 40px; } }
 
 /*# sourceMappingURL=output.css.map */
