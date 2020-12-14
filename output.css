@@ -158,6 +158,10 @@ main .content {
       line-height: 1.2; }
 
 @media (max-width: 700px) {
+  .content-wrapper {
+    padding: 0 5px;
+    padding-right: 15px; }
+
   .header-nav-desktop, .social-desktop {
     display: none; }
 
@@ -175,5 +179,15 @@ main .content {
       text-align: left;
       margin: auto;
       margin-bottom: 40px; } }
+@media (max-width: 500px) {
+  .header {
+    padding: 5px 0;
+    margin-top: 10px; }
+
+  .header-banner .branding .title {
+    font-size: 40px; }
+
+  .header-banner .branding .logo {
+    height: 4rem; } }
 
 /*# sourceMappingURL=output.css.map */
